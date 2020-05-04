@@ -10,13 +10,23 @@
     "clean": "rimraf build/ dev/ *.zip *.crx",
     "lint": "eslint app chrome test scripts webpack/*.js",
     "test-e2e": "cross-env NODE_ENV=test mocha -r ./test/setup-app test/e2e",
-    "test": "cross-env NODE_ENV=test mocha -r ./test/setup-app test/app"
+    "test": "cross-env NODE_ENV=test mocha -r ./test/setup-app test/app",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/jhen0409/react-chrome-extension-boilerplate.git"
   },
-  "keywords": ["chrome", "extension", "react", "redux", "hot reload", "webpack", "boilerplate"],
+  "keywords": [
+    "chrome",
+    "extension",
+    "react",
+    "redux",
+    "hot reload",
+    "webpack",
+    "boilerplate"
+  ],
   "author": "Jhen <developer@jhen.me>",
   "license": "MIT",
   "devDependencies": {
@@ -67,6 +77,8 @@
     "react-dom": "^15.0.2",
     "react-redux": "^4.3.0",
     "redux": "^3.2.1",
-    "redux-thunk": "^2.0.1"
-  }
+    "redux-thunk": "^2.0.1",
+    "snyk": "^1.317.0"
+  },
+  "snyk": true
 }
